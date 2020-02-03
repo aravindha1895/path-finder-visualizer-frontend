@@ -1,0 +1,36 @@
+.header {
+  background-color: #263238;
+  height: 45px;
+  padding: 3px 40px 8px 16px;
+  color: white;
+  margin-top: 0;
+}
+.path-block {
+  background-color: rgb(9, 39, 56);
+}
+.path-clear {
+  background-color: darkslategray;
+}
+.path-source {
+  background-color: rgb(8, 255, 222);
+}
+.path-dest {
+  background-color: goldenrod;
+}
+td {
+  height: 10px;
+  width: 10px;
+}
+button {
+  margin-left: 10px;
+  margin-top: 8px;
+}
+#algoHeading {
+  margin-right: 15px;
+  font-size: 15px;
+}
+#instructions{
+  color: white;
+  display: flex;
+  flex-direction: row;
+}

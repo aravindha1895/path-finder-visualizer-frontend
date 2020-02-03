@@ -1,0 +1,39 @@
+<div class="header">
+  <small id="algoHeading">Shortest path</small>
+  <button mat-mini-fab color="primary" (click)="this.isSetDestination=false;this.isSetSource=true;">S</button>
+  <button mat-mini-fab color="primary" (click)="this.isSetSource=false;this.isSetDestination=true">D</button>
+  <button mat-mini-fab color="warn" (click)="this.isSetSource=false;this.isSetDestination=false;this.isErasePath='c'"><i
+      class="fa fa-pencil" aria-hidden="true"></i></button>
+  <button mat-mini-fab color="accent"
+    (click)="this.isSetSource=false;this.isSetDestination=false;this.isErasePath='e'"><i
+      class="fa fa-eraser"></i></button>
+
+  <button mat-button color="accent" (click)="findPath()"
+    style="float:right;padding-top: 5px;margin-top:5px">Start</button>
+  <button mat-button color="primary" (click)="reset()"
+    style="float:right;padding-top: 5px;margin-top:5px">Reset</button>
+</div>
+<div id="instructions">
+  <ol>
+    <li>The computation for this visualizer project happens in backend</li>
+    <li>Please run the provided executable jar in backend_jar directory for the visualization to work</li>
+    <li>For backend code reference, refer algo-visualizer-backend repository</li>
+    <li>Command for running executable jar is provided in README.txt file</li>
+  </ol>
+  <ol>
+    <li>Press S and click anywhere on grid to set source</li>
+    <li>Press D and click anywhere on grid to set destination</li>
+    <li>Press pencil icon and click and drag anywhere on grid to create a path block.</li>
+    <li>Press eraser icon and click and drag anywhere on grid to remove the path block</li>
+  </ol>
+</div>
+<table style="border:1px solid black">
+  <tbody>
+    <tr *ngFor="let row of inputMatrix; let i=index" style="border:1px solid black">
+      <td *ngFor="let col of row; let j=index" style="border:1px solid black" id={{i}}_{{j}}
+        [class]="returnClassName(i,j)" (mousedown)="onMouseDown($event,i,j)" (mousemove)="onMouseOver($event,i,j)"
+        (mouseup)="onMouseUp()">
+      </td>
+    </tr>
+  </tbody>
+</table>
