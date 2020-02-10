@@ -2,5 +2,5 @@ The computation for this visuaizer project happens in backend. Please run execut
 
 Please run below commands.
 1. cd backend_jar
-2. java - jar algo-anim-calculator-0.0.1-SNAPSHOT.jar
+2. java -jar algo-anim-calculator-0.0.1-SNAPSHOT.jar
 3. Start the angular appication

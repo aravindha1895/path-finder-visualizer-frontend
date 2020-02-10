@@ -33,4 +33,5 @@ button {
   color: white;
   display: flex;
   flex-direction: row;
+  font-size: 12px;
 }

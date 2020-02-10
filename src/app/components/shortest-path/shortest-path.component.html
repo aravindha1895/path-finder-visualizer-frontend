@@ -13,7 +13,7 @@
   <button mat-button color="primary" (click)="reset()"
     style="float:right;padding-top: 5px;margin-top:5px">Reset</button>
 </div>
-<div id="instructions">
+<div id="instructions" (mouseup)="onMouseUp()">
   <ol>
     <li>The computation for this visualizer project happens in backend</li>
     <li>Please run the provided executable jar in backend_jar directory for the visualization to work</li>
@@ -27,12 +27,12 @@
     <li>Press eraser icon and click and drag anywhere on grid to remove the path block</li>
   </ol>
 </div>
-<table style="border:1px solid black">
+<table style="border:1px solid black" (mouseup)="onMouseUp()">
   <tbody>
     <tr *ngFor="let row of inputMatrix; let i=index" style="border:1px solid black">
       <td *ngFor="let col of row; let j=index" style="border:1px solid black" id={{i}}_{{j}}
         [class]="returnClassName(i,j)" (mousedown)="onMouseDown($event,i,j)" (mousemove)="onMouseOver($event,i,j)"
-        (mouseup)="onMouseUp()">
+        >
       </td>
     </tr>
   </tbody>
